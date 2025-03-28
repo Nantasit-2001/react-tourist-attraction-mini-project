@@ -1,11 +1,14 @@
 import "./App.css";
-
+import {BrowserRouter,Route,Routes} from "react-router-dom"
+import LandingPage from "./page/LandingPage";
 function App() {
-  return <div className="App">{/* Start here */}
-  <div className="h-screen flex items-center justify-center bg-blue-500 text-white text-3xl">
-      Tailwind ใช้งานได้แล้ว! 🚀
-    </div>
-  </div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage/>}/>
+      </Routes>
+    </BrowserRouter>
+    )
 }
 
 export default App;
